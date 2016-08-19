@@ -17,3 +17,14 @@ $(function() {
         event.preventDefault();
     });
 });
+
+// show hide navbar after scrolling
+$("#menu").hide();
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 400) {
+        $("#menu").fadeIn("slow");
+    }
+    else {
+        $("#menu").fadeOut("fast");
+    }
+});
